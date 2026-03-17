@@ -1,0 +1,200 @@
+.Nav {
+  height: 10vh;
+}
+.dropdown-menu {
+  width: 30vw;
+  height: 30vh;
+}
+.search-box {
+  // background-color: #36846b;
+  opacity: 0.9;
+
+  input {
+    width: 20rem;
+  }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 992px) {
+  .Nav {
+    height: auto;
+    padding: 0.75rem 1rem;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0;
+  }
+
+  .Nav h1 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+
+  .Nav-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background: transparent;
+  }
+
+  // base hidden menu lists
+  .center > ul {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    gap: 0.75rem !important;
+    flex-wrap: wrap;
+    display: none !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .center .Nav-auth {
+    display: none !important;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    width: 60vw;
+    height: auto;
+  }
+
+  .search-box input {
+    width: 14rem;
+  }
+
+  // show menu when mobile open
+  // overlay container
+  .center {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 6000; // ensure overlay covers any page controls
+    width: 100%;
+  }
+  .mobile-open .center {
+    display: flex;
+    justify-content: flex-start; // align card to left
+    align-items: flex-start;
+    padding: 1rem 0.5rem 1rem 0.5rem; // small side padding
+  }
+
+  // stacked card-style panel
+  .mobile-panel {
+    position: relative;
+    width: 90%;
+    max-width: 380px;
+    margin: 0.75rem 0 0 0.5rem; // shift to the left
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem 1rem 1rem; // add top padding for close button
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    z-index: 6100; // stay above the overlay
+  }
+
+  .mobile-open .center > .mobile-panel > ul {
+    display: flex !important;
+    flex-direction: column !important; // force vertical stacking
+    align-items: flex-start !important; // left align content
+    text-align: left;
+    gap: 0.75rem;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .mobile-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.25rem; /* half the previous size */
+    height: 1.25rem; /* half the previous size */
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    cursor: pointer;
+    color: #333;
+  }
+  .mobile-close i { font-size: 1.1rem; }
+
+  .center > ul li,
+  .center .Nav-auth li {
+    width: 100%;
+  }
+  .center > ul a,
+  .center .Nav-auth a {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .center .search-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .center .search-box input {
+    flex: 1 1 auto;
+    width: auto; // keep input and icon side-by-side
+  }
+  .center .search-box i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // keep dropdowns usable inside stacked menu
+  .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Nav {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .Nav h1 {
+    font-size: 1.5rem;
+  }
+
+  .center > ul {
+    width: 100%;
+    gap: 0.5rem !important;
+  }
+  .center .Nav-auth {
+    width: 100%;
+    gap: 0.5rem !important;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+  .search-box input {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    width: 90vw;
+  }
+}

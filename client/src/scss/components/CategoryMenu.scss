@@ -1,0 +1,41 @@
+.CategoryMenu-container {
+  &-button {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 5rem;
+    font-size: large;
+    &:hover {
+      background-color: #9ea5a2;
+      opacity: 0.85;
+    }
+  }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 992px) {
+  .CategoryMenu-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .CategoryMenu-container-button {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 2rem;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .CategoryMenu-container {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem !important;
+  }
+  .CategoryMenu-container-button {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+  }
+}

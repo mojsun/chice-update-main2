@@ -1,0 +1,16 @@
+.Footer {
+  // height: 29vh;
+  // position: fixed;
+}
+.FooterMobile { background: rgba(229,231,235,0.8); }
+.FooterMobile-inner { width: min(80vw, 56rem); margin: 0 auto; padding: 1.5rem 0; }
+.FooterMobile-title { font-weight: 800; line-height: 1.2; font-size: 1.25rem; }
+.FooterMobile-title-sm { font-weight: 800; line-height: 1.2; font-size: 1.1rem; }
+.FooterMobile-text { color: rgba(0,0,0,0.7); font-size: 0.95rem; }
+.FooterMobile-list { list-style: disc; padding-left: 1.25rem; margin: 0; }
+.FooterMobile-tabs a { font-size: 0.95rem; }
+.FooterMobile-socialIcon { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; background: #fff; border-radius: 9999px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+@media (min-width: 640px) and (max-width: 1024px) {
+  .FooterMobile-inner { padding: 2rem 0; }
+  .FooterMobile-title { font-size: 1.5rem; }
+}

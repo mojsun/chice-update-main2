@@ -1,0 +1,39 @@
+.login {
+  height: 80vh;
+  &_video {
+    &_content {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}
+
+/* Mobile/Tablet overlay login */
+@media screen and (max-width: 1024px) {
+  /* remove side padding from bootstrap container on small screens */
+  .login { padding-left: 0 !important; padding-right: 0 !important; }
+
+  .login-overlay-container {
+    position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .login-overlay-video {
+    position: absolute;
+    inset: 0; /* stretch to all sides */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill without white edges */
+    transform: none;
+    border-radius: 0; /* full-bleed */
+  }
+  .login-overlay-form {
+    position: relative; /* above video */
+    z-index: 1;
+    width: 70vw; /* requested width */
+    margin: 0 auto; /* centered by flex container */
+    background: transparent; /* transparent background over video */
+    border-radius: 12px;
+    box-shadow: none;
+    transform: translateX(-12px);
+  }
+}

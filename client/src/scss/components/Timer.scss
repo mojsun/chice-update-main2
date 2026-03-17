@@ -1,0 +1,22 @@
+.explosionicon {
+  width: 2rem;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .CountdownBar {
+    margin: 0 !important;
+    width: 100%;
+    background-color: #000 !important;
+    padding-left: 0; padding-right: 0;
+  }
+  .CountdownText {
+    margin: 0 !important;
+    font-size: 0.8rem; /* smaller text to keep one line */
+    white-space: nowrap; /* force single line */
+    line-height: 1.2;
+  }
+  .CountdownText .h5 { font-size: 0.9rem; } /* smaller highlighted Sales */
+  .CountdownBar img { margin: 0; }
+  .explosionicon { width: 1rem; }
+}
